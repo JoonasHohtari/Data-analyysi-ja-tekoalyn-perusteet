@@ -1,4 +1,9 @@
+import random
+
 def summa(a,b):
     return a + b
 
-print (f'lukujen {3} ja {5} summa on {summa(3,5)}')
+a = random.randint(0, 10)
+b = random.randint(0, 10)
+
+print (f'lukujen {a} ja {b} summa on {summa(a,b)}')
