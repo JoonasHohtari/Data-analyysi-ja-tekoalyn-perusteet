@@ -69,3 +69,22 @@ df_corr = df.loc[:, cor_cols]
 corr = df_corr.corr()
 sns.heatmap(corr, annot=True)
 plt.show()
+
+salary_col = ['palkka']
+age_col = ['ikä']
+
+pearsonr_result = stats.pearsonr(df['palkka'], df['ikä'])
+print('PearsonR Tulokset')
+print(f'{pearsonr_result}')
+print(f'{pearsonr_result.confidence_interval()}')
+print('P-Arvo on tilastollisesti merkitsevä, koska se on alle 0.05')
+print('')
+spearmanr_result = stats.spearmanr(df['palkka'], df['ikä'])
+print('SpearmanR tulokset')
+print(f'{spearmanr_result}')
+print('P-Arvo on tilastollisesti merkitsevä, koska se on alle 0.05')
+print('')
+
+reg_s_a = sns.regplot(x=df['ikä'], y=df['palkka'],truncate=False)
+plt.show()
+
