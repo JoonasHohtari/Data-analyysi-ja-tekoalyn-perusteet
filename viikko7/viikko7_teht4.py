@@ -43,16 +43,16 @@ X_pred_new = model.predict_proba(Xnew)
 
 tn, fp, fn, tp = cm.ravel()
 
-ax= sns.heatmap(cm, cmap=sns.color_palette(['tomato', 'lightgreen'], as_cmap=True),
-                 annot=[[f"TP={cm[0][0]:.0f}", f"FP={cm[0][1]:.0f}"], [f"FN={cm[1][0]:.0f}", f"TN={cm[1][1]:.0f}"]],
-                 fmt='', annot_kws={'fontsize': 30}, cbar=False, square=True)
-ax.set_xlabel('Actual Values')
-ax.set_ylabel('Predicted')
-ax.tick_params(length=0, labeltop=True, labelbottom=False)
-ax.xaxis.set_label_position('top')
-ax.set_xticklabels(['Positive', 'Negative'])
-ax.set_yticklabels(['Positive', 'Negative'], rotation=90, va='center')
-ax.add_patch(plt.Rectangle((0, 1), 1, 0.1, color='yellow', clip_on=False, zorder=0, transform=ax.transAxes))
-ax.add_patch(plt.Rectangle((0, 0), -0.1, 1, color='yellow', clip_on=False, zorder=0, transform=ax.transAxes))
-plt.tight_layout()
-plt.show()
+# ax= sns.heatmap(cm, cmap=sns.color_palette(['tomato', 'lightgreen'], as_cmap=True),
+#                  annot=[[f"TP={cm[0][0]:.0f}", f"FP={cm[0][1]:.0f}"], [f"FN={cm[1][0]:.0f}", f"TN={cm[1][1]:.0f}"]],
+#                  fmt='', annot_kws={'fontsize': 30}, cbar=False, square=True)
+# ax.set_xlabel('Actual Values')
+# ax.set_ylabel('Predicted')
+# ax.tick_params(length=0, labeltop=True, labelbottom=False)
+# ax.xaxis.set_label_position('top')
+# ax.set_xticklabels(['Positive', 'Negative'])
+# ax.set_yticklabels(['Positive', 'Negative'], rotation=90, va='center')
+# ax.add_patch(plt.Rectangle((0, 1), 1, 0.1, color='yellow', clip_on=False, zorder=0, transform=ax.transAxes))
+# ax.add_patch(plt.Rectangle((0, 0), -0.1, 1, color='yellow', clip_on=False, zorder=0, transform=ax.transAxes))
+# plt.tight_layout()
+# plt.show()
